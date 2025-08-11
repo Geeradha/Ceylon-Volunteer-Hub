@@ -14,11 +14,15 @@ const Header: React.FC = () => {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <div className="logo-creative">
-              <span className="logo-text">Ceylon</span>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img className="logo-img" src="/logo.png" alt="Ceylon Volunteer Hub Logo" />
+              <div className="logo-creative">
+                <span className="logo-text">Ceylon</span>
               <span className="logo-accent">Volunteer Hub</span>
               <div className="logo-underline"></div>
-            </div>
+            
+              </div>
+              </div>
           </Link>
         </div>
         
