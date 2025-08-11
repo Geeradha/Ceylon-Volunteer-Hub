@@ -27,11 +27,6 @@ const Header: React.FC = () => {
             <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
             <li><Link to="/about" onClick={() => setIsMenuOpen(false)}>About Us</Link></li>
             <li><Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link></li>
-            <li><Link to="/destinations" onClick={() => setIsMenuOpen(false)}>Destinations</Link></li>
-            <li><Link to="/volunteer-life" onClick={() => setIsMenuOpen(false)}>Volunteer Life</Link></li>
-            <li><Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>Testimonials</Link></li>
-            <li><Link to="/gallery" onClick={() => setIsMenuOpen(false)}>Gallery</Link></li>
-            <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</Link></li>
             <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
           </ul>
           <div className="nav-cta">
