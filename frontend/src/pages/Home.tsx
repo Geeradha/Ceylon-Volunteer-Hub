@@ -116,7 +116,14 @@ const Home: React.FC = () => {
         <div className="container">
           <div className="mission-content">
             <div className="mission-text">
-              <h2>Our Mission</h2>
+                <h2 style={{ display: 'flex', alignItems: 'center' }}>
+                <img
+                  src="/images/mission-icon.svg"
+                  alt="Mission Icon"
+                  style={{ width: 40, verticalAlign: 'middle', marginRight: 8 }}
+                />
+                Our Mission
+                </h2>
               <p>
                 We believe in creating authentic connections between volunteers and local communities 
                 in Sri Lanka. Our programs are designed to provide meaningful experiences that benefit 
@@ -142,7 +149,7 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="mission-image">
-              <img src="/images/mission.jpg" alt="Volunteers working with children" />
+              <img src="/images/v.png" alt="Volunteers working with children" />
             </div>
           </div>
         </div>
