@@ -6,42 +6,36 @@ const Home: React.FC = () => {
   
   const heroImages = [
     {
-      src: "/images/slv1.jpeg",
+      src: "/images/slv1.jpg",
       alt: "Volunteers working with children",
       title: "Transform Lives Through Education",
       subtitle: "Support children's education in rural Sri Lankan schools"
     },
     {
-      src: "/images/slv2.jpeg", 
+      src: "/images/slv2.jpg", 
       alt: "Mental health support",
       title: "Mental Health Advocacy",
       subtitle: "Make a difference in community mental health initiatives"
     },
     {
-      src: "/images/slv3.jpeg",
+      src: "/images/slv3.jpg",
       alt: "Cultural exchange",
       title: "Cultural Immersion",
       subtitle: "Experience authentic Sri Lankan culture and traditions"
     },
     {
-      src: "/images/slv4.jpeg",
+      src: "/images/slv4.png",
       alt: "Community development",
       title: "Community Development",
       subtitle: "Help build sustainable projects in local communities"
-    },
-    {
-      src: "/images/slv5.jpeg",
-      alt: "Special needs support",
-      title: "Special Needs Support", 
-      subtitle: "Provide care and education for children with special needs"
     }
   ];
 
-  // Auto-change slides every 5 seconds
+  // Auto-change slides every 10 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 10000);
     
     return () => clearInterval(timer);
   }, [heroImages.length]);
@@ -104,30 +98,10 @@ const Home: React.FC = () => {
           </button>
         </div>
         
-        {/* Trust Signals Bar */}
-        <div className="trust-bar">
-          <div className="container">
-            <div className="trust-stats">
-              <div className="trust-item">
-                <span className="trust-number">1000+</span>
-                <span className="trust-label">Volunteers</span>
-              </div>
-              <div className="trust-item">
-                <span className="trust-number">2010</span>
-                <span className="trust-label">Since</span>
-              </div>
-              <div className="trust-item">
-                <span className="trust-number">50+</span>
-                <span className="trust-label">Projects</span>
-              </div>
-              <div className="trust-item">
-                <span className="trust-number">24/7</span>
-                <span className="trust-label">Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </section>
+        
+     
 
       {/* Main Heading Section */}
       <section className="main-heading">

@@ -42,8 +42,8 @@
 
 .btn-outline {
   background: transparent;
-  color: #663399;
-  border-color: #663399;
+  color: white;
+  border-color: white;
 }
 
 .btn-outline:hover {
@@ -59,7 +59,7 @@
 /* Hero Carousel Styles */
 .hero-carousel {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   min-height: 600px;
   overflow: hidden;
   margin-top: 80px; /* Account for fixed header */
@@ -112,11 +112,8 @@
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
   animation: fadeInUp 1s ease-out 0.5s both;
   background: linear-gradient(45deg, #fff, #D4A5D8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
