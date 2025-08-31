@@ -52,8 +52,9 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Contact Info</h4>
+            
             <div className="contact-info">
+              <h4>Contact Info</h4>
               <p><i className="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
               <p><i className="fas fa-phone"></i> +94 77 123 4567</p>
               <p><i className="fas fa-envelope"></i> info@srilankavol.org</p>
@@ -78,3 +79,11 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+// No changes needed in JSX. The white box is a CSS issue.
+// Ensure your Footer.css contains:
+// .contact-info, .footer-section {
+//   background: none !important;
+//   box-shadow: none !important;
+//   border-radius: 0 !important;
+// }

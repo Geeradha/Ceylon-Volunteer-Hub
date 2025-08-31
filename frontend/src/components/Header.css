@@ -144,7 +144,7 @@
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background: white;
+  background: #663399; /* Purple color for hamburger icon */
   margin: 3px 0;
   transition: 0.3s;
 }
@@ -190,6 +190,20 @@
     display: block;
     padding: 0.8rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white; /* White text for mobile navigation */
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background: #663399; /* Keep purple color when active */
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background: #663399; /* Keep purple color when active */
   }
 
   .nav-cta {
@@ -204,6 +218,9 @@
 }
 
 @media (max-width: 480px) {
+  .menu-toggle span {
+    background: #663399;
+  }
   .logo-text {
     font-size: 1.2rem;
   }
