@@ -15,23 +15,23 @@ const Footer: React.FC = () => {
               through ethical, community-led programs.
             </p>
             <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook"></i>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i>
+              <a href="https://wa.me" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i className="fab fa-whatsapp"></i>
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <i className="fab fa-youtube"></i>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
           </div>
 
           <div className="footer-section">
-            <h4>Quick Links</h4>
+            <h4>Guide: Links</h4>
             <ul>
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/programs">Volunteer Programs</Link></li>
@@ -43,31 +43,31 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>Programs</h4>
             <ul>
-              <li><Link to="/programs#mental-health">Mental Health</Link></li>
-              <li><Link to="/programs#special-needs">Special Needs</Link></li>
-              <li><Link to="/programs#teaching">Rural Teaching</Link></li>
-              <li><Link to="/programs#cultural">Cultural Exchange</Link></li>
-              <li><Link to="/programs#psychology">Psychology Workshop</Link></li>
+              <li><Link to="/programs/mental-health">Mental Health</Link></li>
+              <li><Link to="/programs/special-needs">Special Needs</Link></li>
+              <li><Link to="/programs/rural-teaching">Rural Teaching</Link></li>
+              <li><Link to="/programs/cultural-exchange">Cultural Exchange</Link></li>
+              <li><Link to="/programs/psychology-workshop">Psychology Workshop</Link></li>
             </ul>
           </div>
 
           <div className="footer-section">
-            
             <div className="contact-info">
               <h4>Contact Info</h4>
               <p><i className="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</p>
               <p><i className="fas fa-phone"></i> +94 77 123 4567</p>
-              <p><i className="fas fa-envelope"></i> info@srilankavol.org</p>
-              <p><i className="fab fa-whatsapp"></i> WhatsApp: +94 77 123 4567</p>
+              <p><i className="fas fa-envelope"></i> info@ceylonvolunteerhub.org</p>
             </div>
           </div>
         </div>
 
+        <div className="footer-divider"></div>
+
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>&copy; 2025 Ceylon Volunteer Hub. All rights reserved.</p>
+            <p>&copy; 2005 Ceylon Volunteer Hub. All rights reserved.</p>
             <div className="footer-links">
-              <Link to="/privacy">Privacy Policy</Link>
+              <span>Printed Page:</span>
               <Link to="/terms">Terms of Service</Link>
               <Link to="/contact">Contact Us</Link>
             </div>
@@ -79,11 +79,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-// No changes needed in JSX. The white box is a CSS issue.
-// Ensure your Footer.css contains:
-// .contact-info, .footer-section {
-//   background: none !important;
-//   box-shadow: none !important;
-//   border-radius: 0 !important;
-// }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBrain, FaHandsHelping, FaBook } from 'react-icons/fa';
+import { FaBrain, FaHandsHelping, FaBook, FaHeart, FaAward, FaUsers, FaGlobe, FaLeaf } from 'react-icons/fa';
 import { MdEmojiEmotions, MdSchool } from 'react-icons/md';
 import './Home.css';
 
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className="mission-image">
-              <img src="/images/slv5.jpeg" alt="Volunteers working with children" />
+              <img src="/images/slv5.jpeg" alt="Main Mission" className="main-image" />
             </div>
           </div>
         </div>
@@ -139,98 +139,144 @@ const Home: React.FC = () => {
           <h2>Leaders in international volunteering and mental health, making a positive impact in Southern Sri Lanka</h2>
           <p>Ceylon Volunteer Hub offers hands-on mental health experience in Sri Lanka. Throughout placement at psychiatric facilities, social initiatives, and charities in need of support. We bridge the gap between skilled volunteers and those in need.</p>
           
-          <div className="programs-grid">
-            <div className="program-card">
-              <div className="program-image-container" style={{ position: 'relative' }}>
-                <img src="/images/slv15.jpeg" alt="Mental Health Projects" className="program-image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div className="program-image-overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div className="programs-grid-horizontal">
+            {/* Mental Health Projects */}
+            <div className="program-card-horizontal">
+              <div className="program-image-side">
+                <img src="/images/slv15.jpeg" alt="Mental Health Projects" />
+                <div className="program-image-overlay">
                   <div className="program-icon"><FaBrain size={40} color="white" /></div>
-                  <div className="program-content" style={{ position: 'absolute', bottom: '20px', left: '0', right: '0', color: 'white', textAlign: 'center', background: 'transparent', borderRadius: '10px', padding: '1rem' }}>
-                    <h3>Mental Health Projects</h3>
-                    <p>Support mental health awareness and counseling services in local communities.</p>
-                    <div className="program-cta">
-                      <a href="#" className="learn-more">Learn More</a>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div className="program-content-side">
+                <h3>Mental Health Projects</h3>
+                <p>Support mental health awareness and counseling services in local communities. Work with professionals to make a difference in psychiatric facilities.</p>
+                <div className="program-cta">
+                  <a href="/programs/mental-health" className="btn-learn">Learn More</a>
                 </div>
               </div>
             </div>
-            <div className="program-card">
-              <div className="program-image-container" style={{ position: 'relative' }}>
-                <img src="/images/slv14.jpeg" alt="Social Outreach Projects" className="program-image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div className="program-image-overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            
+            {/* Social Outreach Projects */}
+            <div className="program-card-horizontal">
+              <div className="program-image-side">
+                <img src="/images/slv14.jpeg" alt="Social Outreach Projects" />
+                <div className="program-image-overlay">
                   <div className="program-icon"><FaHandsHelping size={40} color="white" /></div>
-                  <div className="program-content" style={{ position: 'absolute', bottom: '20px', left: '0', right: '0', color: 'white', textAlign: 'center', background: 'transparent', borderRadius: '10px', padding: '1rem' }}>
-                    <h3>Social Outreach Projects</h3>
-                    <p>Engage with communities through social initiatives and development programs.</p>
-                    <div className="program-cta">
-                      <a href="#" className="learn-more">Learn More</a>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div className="program-content-side">
+                <h3>Social Outreach Projects</h3>
+                <p>Engage with communities through social initiatives and development programs. Help build sustainable projects that make a lasting impact.</p>
+                <div className="program-cta">
+                  <a href="/programs/social-outreach" className="btn-learn">Learn More</a>
                 </div>
               </div>
             </div>
-            <div className="program-card">
-              <div className="program-image-container" style={{ position: 'relative' }}>
-                <img src="/images/slv12.jpeg" alt="Educational Projects" className="program-image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div className="program-image-overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            
+            {/* Educational Projects */}
+            <div className="program-card-horizontal">
+              <div className="program-image-side">
+                <img src="/images/slv12.jpeg" alt="Educational Projects" />
+                <div className="program-image-overlay">
                   <div className="program-icon"><FaBook size={40} color="white" /></div>
-                  <div className="program-content" style={{ position: 'absolute', bottom: '20px', left: '0', right: '0', color: 'white', textAlign: 'center', background: 'transparent', borderRadius: '10px', padding: '1rem' }}>
-                    <h3>Educational Projects</h3>
-                    <p>Teach English and other subjects in rural schools, helping to improve education access.</p>
-                    <div className="program-cta">
-                      <a href="#" className="learn-more">Learn More</a>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div className="program-content-side">
+                <h3>Educational Projects</h3>
+                <p>Teach English and other subjects in rural schools, helping to improve education access and quality for underprivileged children.</p>
+                <div className="program-cta">
+                  <a href="/programs/education" className="btn-learn">Learn More</a>
                 </div>
               </div>
             </div>
-            <div className="program-card">
-              <div className="program-image-container" style={{ position: 'relative' }}>
-                <img src="/images/slv13.jpeg" alt="Therapeutic Workshops" className="program-image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div className="program-image-overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            
+            {/* Therapeutic Workshops */}
+            <div className="program-card-horizontal">
+              <div className="program-image-side">
+                <img src="/images/slv13.jpeg" alt="Therapeutic Workshops" />
+                <div className="program-image-overlay">
                   <div className="program-icon"><MdEmojiEmotions size={40} color="white" /></div>
-                  <div className="program-content" style={{ position: 'absolute', bottom: '20px', left: '0', right: '0', color: 'white', textAlign: 'center', background: 'transparent', borderRadius: '10px', padding: '1rem' }}>
-                    <h3>Therapeutic Workshops</h3>
-                    <p>From laughing yoga to dance movement therapy, explore therapeutic methods.</p>
-                    <div className="program-cta">
-                      <a href="#" className="learn-more">Learn More</a>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div className="program-content-side">
+                <h3>Therapeutic Workshops</h3>
+                <p>From laughing yoga to dance movement therapy, explore various therapeutic methods and help facilitate healing sessions for communities.</p>
+                <div className="program-cta">
+                  <a href="/programs/therapeutic-workshops" className="btn-learn">Learn More</a>
                 </div>
               </div>
             </div>
-            <div className="program-card">
-              <div className="program-image-container" style={{ position: 'relative' }}>
-                <img src="/images/slv11.jpeg" alt="Professional Seminars" className="program-image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div className="program-image-overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            
+            {/* Professional Seminars */}
+            <div className="program-card-horizontal">
+              <div className="program-image-side">
+                <img src="/images/slv11.jpeg" alt="Professional Seminars" />
+                <div className="program-image-overlay">
                   <div className="program-icon"><MdSchool size={40} color="white" /></div>
-                  <div className="program-content" style={{ position: 'absolute', bottom: '20px', left: '0', right: '0', color: 'white', textAlign: 'center', background: 'transparent', borderRadius: '10px', padding: '1rem' }}>
-                    <h3>Professional Seminars</h3>
-                    <p>Attend professional development seminars and training sessions.</p>
-                    <div className="program-cta">
-                      <a href="#" className="learn-more">Learn More</a>
-                    </div>
-                  </div>
+                </div>
+              </div>
+              <div className="program-content-side">
+                <h3>Professional Seminars</h3>
+                <p>Attend professional development seminars and training sessions to enhance your skills while contributing to local capacity building.</p>
+                <div className="program-cta">
+                  <a href="/programs/seminars" className="btn-learn">Learn More</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="programs-decoration decoration-1">❤</div>
-        <div className="programs-decoration decoration-2">✦</div>
       </section>
 
-      {/* Call to Action */}
-      <section className="cta">
+      {/* Why Choose Us Section */}
+      <section className="why-choose-us">
         <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Make a Difference?</h2>
-            <p>Join hundreds of volunteers who have found purpose and adventure in Sri Lanka.</p>
-            <a href="/apply" className="btn btn-primary btn-large">Apply Now</a>
+          <div className="why-choose-content">
+            <div className="why-choose-text">
+              <span className="subtitle">strategy starts with you.</span>
+              <h2>Why Choose Ceylon Volunteer Hub?</h2>
+              <p>
+                At Ceylon Volunteer Hub, we believe that meaningful change begins with individual commitment. 
+                Our programs are designed to create sustainable impact in Sri Lankan communities through 
+                authentic cultural exchange and dedicated volunteer service.
+              </p>
+              <p>
+                Whether you're supporting mental health initiatives, educational programs, or community 
+                development projects, you'll be making a real difference while gaining invaluable experience 
+                and personal growth.
+              </p>
+              <a href="/about" className="btn-learn-more">LEARN MORE</a>
+            </div>
+            <div className="why-choose-image">
+              <img src="/images/slv6.jpg" alt="Volunteer Community" />
+            </div>
           </div>
         </div>
       </section>
+      
+
+      {/* Call to Action */}
+      {/* Call to Action */}
+<section className="cta">
+  <video 
+    autoPlay 
+    muted 
+    loop 
+    playsInline 
+    className="cta-video-background"
+  >
+    <source src="/images/v1.mp4" type="video/mp4" />
+    {/* Fallback image if video doesn't load */}
+    <img src="/images/cta-fallback.jpg" alt="Fallback background" />
+  </video>
+  <div className="container">
+    <div className="cta-content">
+      <h2>Ready to Make a Difference?</h2>
+      <p>Join hundreds of volunteers who have found purpose and adventure in Sri Lanka.</p>
+      <a href="/apply" className="btn btn-primary btn-large">Apply Now</a>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
